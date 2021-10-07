@@ -1,17 +1,16 @@
 import React from "react";
-import { ListaDeNotas } from "./componentes/listaDeNotas";
+import ListaDeNotas from "./componentes/listaDeNotas";
+import FormularioCadastro from "./componentes/FormularioCadastro";
+import { Component } from "react";
 
-function App() {
-  return (
-    <>
-      <form>
-        <input type="text" placeholder="Título" />
-        <textarea placeholder="Escreva sua nota..." />
-        <button>Criar Nota</button>
-      </form>
-      <ListaDeNotas/>
-    </>
-  );
+class App extends Component {
+  render() {
+    return (
+      <>
+        <FormularioCadastro />
+        <ListaDeNotas />
+      </>
+    );
+  }
 }
-
 export default App;
